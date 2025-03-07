@@ -1,11 +1,10 @@
-# Group "GROUP NAME"
-
+# Group "sasso"
 ## Members
 - s123456 LASTNAME FIRSTNAME
-- s123456 LASTNAME FIRSTNAME
+- s348709 SANNA ALBERTO
 - s123456 LASTNAME FIRSTNAME
 
-# Exercise "NAME OF EXERCISE"
+# Exercise "Pokè"
 
 # Lab Journal
 
