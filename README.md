@@ -1,7 +1,7 @@
 # Group "sasso"
 ## Members
-- s345651 IDINI DAVIDE
-- s348709 SANNA ALBERTO
+- s345651 Idini Davide
+- s348709 Sanna Alberto
 - s123456 LASTNAME FIRSTNAME
 
 # Exercise "Pokè"
