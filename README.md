@@ -2,6 +2,7 @@
 ## Members
 - s345651 Idini Davide
 - s348709 Sanna Alberto
+- s348797 Sanna Pietro
 - s123456 LASTNAME FIRSTNAME
 
 # Exercise "Pokè"
