@@ -1,10 +1,14 @@
 # Group "sasso"
 ## Members
 - s345651 Idini Davide
+<<<<<<< HEAD
 - s348709 Sanna Alberto
 - s348797 Sanna Pietro
+=======
+- s348709 SANNA ALBERTO
+>>>>>>> 5b81714 (prime modifiche)
 - s123456 LASTNAME FIRSTNAME
-
+- s337342 Sina Sohrabian
 # Exercise "Pokè"
 Poke
 Design and implement a web application for managing take-away orders in a poke shop. Note that, for
