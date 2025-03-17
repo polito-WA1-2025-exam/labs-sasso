@@ -23,7 +23,7 @@ const IngredientiEnum = Object.freeze({
     CIPOLLA: 'Cipolla'
 })
 
-function Poke(idPoke,size, ingredients, proteins, base){
+export function Poke(idPoke,size, ingredients, proteins, base){
 /*
    * @param {'L' | 'R' | 'M'} size 
    * @param {string} base 
@@ -133,7 +133,7 @@ Poke.prototype.calculatePrice = function(){
     return price;
 }
 
-
+export { SizeEnum, BaseEnum, ProteineEnum, IngredientiEnum };
 // function testPokePrice() {
 //     console.log("🔍 Inizio test calcolo prezzo...");
 
