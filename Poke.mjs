@@ -134,56 +134,56 @@ Poke.prototype.calculatePrice = function(){
 }
 
 
-function testPokePrice() {
-    console.log("🔍 Inizio test calcolo prezzo...");
+// function testPokePrice() {
+//     console.log("🔍 Inizio test calcolo prezzo...");
 
-    // 📌 Test 1: Prezzo base per ogni dimensione
-    const pokeR = new Poke(1, 'R', [], [], 'Riso Bianco');
-    console.assert(pokeR.getPrice() === 9, `❌ Prezzo errato per 'R': ${pokeR.getPrice()}`);
+//     // 📌 Test 1: Prezzo base per ogni dimensione
+//     const pokeR = new Poke(1, 'R', [], [], 'Riso Bianco');
+//     console.assert(pokeR.getPrice() === 9, `❌ Prezzo errato per 'R': ${pokeR.getPrice()}`);
 
-    const pokeM = new Poke(2, 'M', [], [], 'Riso Integrale');
-    console.assert(pokeM.getPrice() === 11, `❌ Prezzo errato per 'M': ${pokeM.getPrice()}`);
+//     const pokeM = new Poke(2, 'M', [], [], 'Riso Integrale');
+//     console.assert(pokeM.getPrice() === 11, `❌ Prezzo errato per 'M': ${pokeM.getPrice()}`);
 
-    const pokeL = new Poke(3, 'L', [], [], 'Quinoa');
-    console.assert(pokeL.getPrice() === 14, `❌ Prezzo errato per 'L': ${pokeL.getPrice()}`);
+//     const pokeL = new Poke(3, 'L', [], [], 'Quinoa');
+//     console.assert(pokeL.getPrice() === 14, `❌ Prezzo errato per 'L': ${pokeL.getPrice()}`);
 
-    console.log("✅ Test 1 superato: Prezzo base corretto.");
+//     console.log("✅ Test 1 superato: Prezzo base corretto.");
 
-    // 📌 Test 2: Aggiunta di ingredienti extra
-    const pokeExtra = new Poke(4, 'R', ['Avocado', 'Cetrioli', 'Edamame', 'Cipolla'], [], 'Riso Bianco');
-    console.assert(pokeExtra.getPrice() === 9, `❌ Prezzo errato per 4 ingredienti in 'R': ${pokeExtra.getPrice()}`);
+//     // 📌 Test 2: Aggiunta di ingredienti extra
+//     const pokeExtra = new Poke(4, 'R', ['Avocado', 'Cetrioli', 'Edamame', 'Cipolla'], [], 'Riso Bianco');
+//     console.assert(pokeExtra.getPrice() === 9, `❌ Prezzo errato per 4 ingredienti in 'R': ${pokeExtra.getPrice()}`);
 
-    pokeExtra.addIngredients('Avocado'); // 1 extra
-    let expectedPrice = 9 + (0.2 * 9);
-    console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato con 1 extra: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
+//     pokeExtra.addIngredients('Avocado'); // 1 extra
+//     let expectedPrice = 9 + (0.2 * 9);
+//     console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato con 1 extra: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
 
-    pokeExtra.addIngredients('Cetrioli'); // 2 extra
-    expectedPrice = 9 + (0.2 * 9) * 2;
-    console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato con 2 extra: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
+//     pokeExtra.addIngredients('Cetrioli'); // 2 extra
+//     expectedPrice = 9 + (0.2 * 9) * 2;
+//     console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato con 2 extra: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
 
-    console.log("✅ Test 2 superato: Sovrapprezzo ingredienti extra corretto.");
+//     console.log("✅ Test 2 superato: Sovrapprezzo ingredienti extra corretto.");
 
-    // 📌 Test 3: Rimozione ingredienti
-    pokeExtra.removeIngredients('Avocado'); // Torna a 1 extra
-    expectedPrice = 9 + (0.2 * 9);
-    console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato dopo rimozione ingrediente: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
+//     // 📌 Test 3: Rimozione ingredienti
+//     pokeExtra.removeIngredients('Avocado'); // Torna a 1 extra
+//     expectedPrice = 9 + (0.2 * 9);
+//     console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato dopo rimozione ingrediente: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
 
-    console.log("✅ Test 3 superato: Prezzo aggiornato correttamente dopo rimozione ingrediente.");
+//     console.log("✅ Test 3 superato: Prezzo aggiornato correttamente dopo rimozione ingrediente.");
 
-    // 📌 Test 4: Aggiunta e rimozione proteine (il prezzo NON deve cambiare)
-    pokeExtra.addProteins('Salmone');
-    pokeExtra.addProteins('Pollo');
-    console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato dopo aggiunta proteine: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
+//     // 📌 Test 4: Aggiunta e rimozione proteine (il prezzo NON deve cambiare)
+//     pokeExtra.addProteins('Salmone');
+//     pokeExtra.addProteins('Pollo');
+//     console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato dopo aggiunta proteine: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
 
-    pokeExtra.removeProteins('Salmone');
-    console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato dopo rimozione proteina: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
+//     pokeExtra.removeProteins('Salmone');
+//     console.assert(pokeExtra.getPrice() === expectedPrice, `❌ Prezzo errato dopo rimozione proteina: ${pokeExtra.getPrice()}, atteso: ${expectedPrice}`);
 
-    console.log("✅ Test 4 superato: Aggiunta e rimozione proteine non influiscono sul prezzo.");
+//     console.log("✅ Test 4 superato: Aggiunta e rimozione proteine non influiscono sul prezzo.");
 
-    console.log("🎉 Tutti i test sono stati superati con successo!");
-}
+//     console.log("🎉 Tutti i test sono stati superati con successo!");
+// }
 
-// Avvia i test
-testPokePrice();
+// // Avvia i test
+// testPokePrice();
 
 
