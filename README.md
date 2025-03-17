@@ -3,6 +3,8 @@
 - s345651 Idini Davide
 - s348709 Sanna Alberto
 - s348797 Sanna Pietro
+- s348709 SANNA ALBERTO
+- s123456 LASTNAME FIRSTNAME
 - s337342 Sina Sohrabian
 # Exercise "Pokè"
 Poke
