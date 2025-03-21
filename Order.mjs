@@ -39,8 +39,8 @@ function Order(id_order, poke, quantity) {
 
     this.getPrice = function() {
         let totalPrice = 0;
-        totalPrice = this.pokes.reduce((acc, order) => acc + order[0].price_poke * order[1], 0);
-        if (this.pokes.getTotalQuantity() > 4) {
+        totalPrice = this.pokes.reduce((acc, order) => acc + order[0].pricePoke * order[1], 0);
+        if (this.getTotalQuantity() > 4) {
             totalPrice = totalPrice * 0.9;
         }
         return totalPrice;
@@ -50,16 +50,20 @@ function Order(id_order, poke, quantity) {
 
 //esempio
 
-const order = new Order(3);
-order.add('poke1', 2);
-order.add('poke2', 3);
-console.log(order.id_order, order.pokes);
+const Poke1 = new Poke('poke1', 'R', ['Avocado', 'Cetrioli'], ['Tonno'], 'Riso Bianco');
 
-order.remove('poke1');
-console.log(order.id_order, order.pokes);
+const order = new Order(3, Poke1, 5);
+//order.add(Poke1, 2);
 
-order.mod_quantity('poke2', 5);
-console.log(order.id_order, order.pokes);
+//order.add('poke2', 3);
+console.log(JSON.stringify(order, null, 2));
+console.log(order.getPrice());
+
+//order.remove('poke1');
+//console.log(order.id_order, order.pokes);
+
+//order.mod_quantity('poke2', 5);
+//console.log(order.id_order, order.pokes);
 
 
 
