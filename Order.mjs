@@ -1,7 +1,8 @@
 import { Poke } from './Poke.mjs';
 
-function Order(id_order, poke, quantity) {
+function Order(id_order, data, poke, quantity) {
     this.id_order = id_order;
+    this.data = data;
     this.pokes = [];
     if(poke instanceof Poke) {
         this.pokes.push([poke, quantity]);

@@ -29,8 +29,5 @@ class User {
     getId() {
         return this.idUser;
     }
-
-    checkSecurePassword(password){
-        if(length(password)>8 && )
-    }
+    
 }
