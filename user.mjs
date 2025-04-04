@@ -30,4 +30,10 @@ class User {
         return this.idUser;
     }
 
+    checkSecurePassword(password){
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasNumber = /\d/.test(password);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        return (length(password)>8 && hasNumber && hasUpperCase && hasSpecialChar);
+    }
 }
