@@ -31,6 +31,9 @@ class User {
     }
 
     checkSecurePassword(password){
-        if(length(password)>8 && )
+        const hasUpperCase = /[A-Z]/.test(password);
+        const hasNumber = /\d/.test(password);
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        return (length(password)>8 && hasNumber && hasUpperCase && hasSpecialChar);
     }
 }
