@@ -36,4 +36,8 @@ class User {
         const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
         return (length(password)>8 && hasNumber && hasUpperCase && hasSpecialChar);
     }
+
+    equal(user){
+        return user.idUser === this.user;
+    }
 }
