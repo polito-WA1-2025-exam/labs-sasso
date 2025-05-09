@@ -50,7 +50,6 @@ function Order(id_order, data, poke, quantity) {
 
 
 //esempio
-
 const Poke1 = new Poke('poke1', 'R', ['Avocado', 'Cetrioli'], ['Tonno'], 'Riso Bianco');
 
 const order = new Order(3, Poke1, 5);
