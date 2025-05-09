@@ -1,0 +1,40 @@
+### Crea un nuovo Poke
+POST http://localhost:3000/api/poke HTTP/1.1
+Content-Type: application/json
+
+{
+  "Size": "M",
+  "Base": "Riso bianco",
+  "Price": 8.5,
+  "IdOrder": 1,
+  "Quantity": 2
+}
+
+###
+
+### Ottieni tutti i poke
+GET http://localhost:3000/api/poke HTTP/1.1
+
+###
+
+### Ottieni un poke per ID
+GET http://localhost:3000/api/poke/4 HTTP/1.1
+
+###
+
+### Aggiorna un poke
+PUT http://localhost:3000/api/poke/3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "Size": "L",
+  "Base": "Riso venere",
+  "Price": 9.5,
+  "IdOrder": 1,
+  "Quantity": 3
+}
+
+###
+
+### Cancella un poke
+DELETE http://localhost:3000/api/poke/1 HTTP/1.1
